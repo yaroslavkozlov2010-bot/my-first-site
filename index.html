@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>HELLO 1</title>
+<style>
+
+	#hello { margin: 0 0  200px 0; color: #FF0000; background: linear-gradient(to right, #B8860B, #CD853F, #D2691E); }
+
+	#hello:hover { background: linear-gradient(to bottom, #ffffff, #ff58dc, #00f50a); }
+
+	#telegram { border: solid blue; color: black; background-color: lightblue; border-radius: 0 1000px 0 1000px; padding: 100px; margin: 0 0 100px 100px; position: relative; left: 500px; }
+
+	#google { border: solid red; color: white; border-radius: 1000px 0 1000px 0; padding: 100px; background-color: purple; margin: 0 100px 100px 0; position: relative; left: 500px; }
+
+	#ВКонтакте { border: solid red; color: white; border-radius: 1000px 0 1000px 0; padding: 100px; background-color: blue; margin: 0 100px 100px 0; position: relative; left: 640px; top: 202px; }
+
+	#Яндекс { border: solid blue; color: red; background-color: white; border-radius: 0 1000px 0 1000px; padding: 100px; margin: 0 0 100px 100px; position: relative; left: 440px; top: 202px; }
+
+	a:hover { cursor: pointer; font-weight: 100; }
+
+	h2 { margin-bottom: 300px; color: blue; background: linear-gradient(to right, #4B0082, #6A5ACD, #483D8B); padding: 10px 0 10px 0; }
+
+	h2:hover { background: linear-gradient(to top, #00f50a, #ff58dc, #ffffff); }
+
+	body { background-color: #000000; }
+
+	button, #secret { color: white; background-color: black; margin: 0 10px 0 0; border: solid; border-radius: 50px; }
+
+	#secret { background: linear-gradient(to top, #9400D3, #4B0082); border: solid #40E0D0; }
+
+	#secret:hover { background: linear-gradient(to bottom, rgb( 24, 54, 134 ), rgba( 46, 142, 67, 0.4 )); border: solid rgb( 127, 255, 0 ); }
+
+	button:hover { cursor: pointer; background: radial-gradient(circle, rgb( 255, 20, 147 ), rgb( 139, 0, 0 )); color: black; border: solid rgb( 0, 0, 178 ); }
+
+	img { border-radius: 30px; }
+
+	#cat_1 { position: relative; bottom: 120px; right: 3px; width: 325px; }
+
+	#cat_2 { position: absolute; right: 0px; }   			
+
+	#cat_3 { position: absolute; bottom: 6px; left: 0px; }
+
+	#cat_4 { position: absolute; bottom: 6px; right: 0px; }
+
+	#cat_5 { position: relative; top: 300px; left: 420px; width: 450px; height: 300px; border-radius: 0 0 0 0; }
+
+	#my_cat { width: 250px; height: 50%; position: relative; bottom: 90px; left: 50px; }
+
+	p { color: white; }
+
+</style>
+</head>
+<body>
+	<div id=myWeb>
+		<h1 align=center id="hello">Hello world</h1>
+
+		<img align=center src=""><br>
+		<button onclick="back()">back</button>
+		<button onclick="next()">next</button>
+		<button onclick="joke()">click</button>
+		<button id=secret onclick=secret()>Secret</button>
+		<h2 align=center>не знаю что писать</h2>
+		<a id=telegram href="https://t.me/Gapl6"><strong><em>Telegram</em></strong></a>
+		<a id=google href="https://google/com"><strong><em>Google</em></strong></a><br>
+		<a id=ВКонтакте href="https://vk.ru"><strong><em>VK</em></strong></a>
+		<a id=Яндекс href="https://yandex.ru"><strong><em>Yandex</em></strong></a>
+	</div>
+
+	<p></p>
+<script>
+function next() {
+const el = document.querySelectorAll("a");
+el[0].innerHTML = "<strong><em>Youtube</em></srtrong>";
+el[1].innerHTML = "<strong><em>kinopoisk</em></strong>";
+el[0].href = "https://www.youtube.com/@gameplay-ql4th";
+el[1].href = "https://kinopoisk.ru";
+el[0].style.backgroundColor = '#FF0000';
+el[0].style.color = '#FFFFFF'
+el[1].style.backgroundColor = '	#FF4500';
+}
+
+function back() {
+const el = document.querySelectorAll("a");
+el[0].innerHTML = "<strong><em>Telegram</em></strong>";
+el[1].innerHTML = "<strong><em>Google</em></strong>";
+el[0].href = "https://t.me/Gapl6";
+el[1].href = "https://google.com";
+el[0].style.backgroundColor = '';
+el[0].style.color = '#000000'
+el[1].style.backgroundColor = '';
+}
+
+function joke() {
+const el = document.querySelectorAll("h1, h2");
+el[0].innerHTML = "(～￣▽￣)～";
+el[1].innerHTML = "d=====(￣▽￣*)b";
+}
+		//это коты
+function secret() {
+const el = document.getElementById("myWeb") 	// <= ЭТО ТО ЧТО БУДЕТ МЕНЯТЬСЯ
+el.innerHTML = '<img id=cat_1 src=img/cat-1.JPG> <img id=cat_2 src=https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQAjI09bniIjkMJiUhGWul9WTDjg7VgSVhtGg&s> <img id=cat_3 src=https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTfGQZaEg4NyJJ78vl9oKDHFQivrhcH4aiJfzPGEgb0XihsrFyvpO_NFPE&s> <img id=cat_4 src=https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTZpsm-fMaXoGjybNjqosD4_Jx1yYC5Lhz4HQ&s> <img id=cat_5 src=https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTylpMBkw9_rfSdHdY5XTJkkPUuD906q4pkFw&s> <img id=my_cat src=img/myCat.JPG>'
+}
+
+</script>
+</body>
+</html>
